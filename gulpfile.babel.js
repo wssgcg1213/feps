@@ -187,10 +187,9 @@ gulp.task('install', ['default'], cb => {
         config = require(configPath);
     } catch (e) {}
 
-    console.log('\n\nHello, welcome to FireKylin, a free and open-source content \nmanagement system (CMS), based on ThinkJS and Mysql.\n\nYou need do some config work before the program could work.\nThis utility will walk you through.\n');
+    console.log('\n\nHello, welcome to FEPS, a free and open-source fe content \npublish system (CMS), based on ThinkJS and Mysql.\n\nYou need do some config work before the program could work.\nThis utility will walk you through.\n');
 
     inquirer.prompt([
-        { type: 'input', name: 'url', message: 'Full url of your blog', default: 'http://localhost:1234', validate: validator() },
         { type: 'input', name: 'db_hostname', message: 'Database hostname', default: config.host,  validate: validator('hostname') },
         { type: 'input', name: 'db_port', message: 'Database port', default: parseInt(config.port) || 3306, validate: validator('port') },
         { type: 'input', name: 'db_database', message: 'Database name', default: config.name, validate: validator() },
@@ -219,7 +218,7 @@ export default {
         fs.writeFileSync(configPath, content);
 
         ///** auto import sql **/
-        //let sql = fs.readFileSync( './firekylin.sql', 'utf-8' ).replace(/\$\{db\_prefix\}/g, answers.db_prefix);
+        //let sql = fs.readFileSync( './feps.sql', 'utf-8' ).replace(/\$\{db\_prefix\}/g, answers.db_prefix);
         //let db = mysql.createConnection({
         //    host: answers.db_hostname,
         //    port: answers.db_port,
