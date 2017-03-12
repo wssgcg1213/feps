@@ -1,5 +1,7 @@
 # FEPS
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wssgcg1213/feps.svg)](https://greenkeeper.io/)
+
 前端发布系统
 
 
